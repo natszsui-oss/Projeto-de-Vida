@@ -62,24 +62,20 @@ body {
   .botoes {
     display: flex;
   }
-}
-@media screen and (min-width: 768px) {
-  /* Código omitido */
-
-  .botao:first-child {
-    border-radius: 40px 0 0 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  /* Código omitido */
 
   .botao:last-child {
     border-radius: 0 40px 0 0;
+  }
+  .botao:first-child {
+    border-radius: 40px 0 0 0;
   }
 }
 .ativo {
   background-color: var(--botao-ativo);
   border-bottom: 4px solid var(--verde);
+}
+.abas-textos {
+  background-color: var(--texto-fundo);
 }
 .abas-textos {
   background-color: var(--texto-fundo);
