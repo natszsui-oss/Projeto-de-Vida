@@ -1,108 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-  --cor-de-fundo: #1e1e1e;
-  --verde: #6fff57;
-  --branco: #ffffff;
-  --botao-ativo: #3a375e;
-  --botao-inativo: rgba(58, 55, 94, 0.5);
-  --texto-fundo: rgba(58, 55, 94, 0.3);
+    --cor-de-fundo: #0d1117;
+    --verde: #58a6ff;
+    --branco: #f0f6fc;
+    --botao-ativo: #21262d;
+    --botao-inativo: #161b22;
+    --texto-fundo: #161b22;
 }
 
 body {
-  background-color: var(--cor-de-fundo);
-  color: var(--branco);
-  font-family: "Chakra Petch", sans-serif;
+    background: linear-gradient(135deg, #0d1117, #1f2937);
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
 }
 
 .conteudo-principal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
 }
 
 .titulo-principal {
-  text-align: left;
-  width: 100%;
-  font-size: 32px;
+    text-align: center;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .titulo-principal span {
-  color: var(--verde);
+    color: var(--verde);
 }
 
 .botao {
-  font-family: "Crakra Petch", sans-serif;
-  background-color: var(--botao-inativo);
-  color: var(--branco);
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  font-size: 18px;
-  align-items: center;
-  width: 100%;
-  border-bottom: 4px solid var(--botao-ativo);
-  border-left: 2px solid var(--botao-ativo);
-  border-right: 2px solid var(--botao-ativo);
-  border-top: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1.2em;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    width: 100%;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
 }
 
 .botao:first-child {
-  border-radius: 40px 40px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .botoes {
-  display: block;
+    display: block;
 }
-@media screen and (min-width: 768px) {
-  .botoes {
-    display: flex;
-  }
 
-  .botao:last-child {
-    border-radius: 0 40px 0 0;
-  }
-  .botao:first-child {
-    border-radius: 40px 0 0 0;
-  }
-}
-.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
-}
-.abas-textos {
-  background-color: var(--texto-fundo);
-}
-.abas-textos {
-  background-color: var(--texto-fundo);
-  padding: 40px;
-  border-radius: 0 0 40px 40px;
-}
 .botao.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+    color: var(--verde);
 }
+
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
 .aba-conteudo.ativo {
-  display: block;
+    display: block;
+}
+
+.aba-conteudo {
+    display: none;
 }
 
 .aba-conteudo-titulo-principal {
-  font-size: 28px;
-  text-align: center;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
 .aba-conteudo-titulo-secundario {
-  text-align: center;
-  color: var(--verde);
-  text-transform: uppercase;
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
+
 .contador {
-  font-size: 20px;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
 }
-.aba-conteudo {
-  display: none;
+
+.contador-digito {
+    padding: 15px;
+    text-align: center;
+    min-width: 120px;
 }
+
+.contador-digito-numero {
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--verde);
+}
+
+.contador-digito-texto {
+    color: var(--branco);
+    font-size: 18px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 20px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 20px 0 0;
+    }
+}
+```
